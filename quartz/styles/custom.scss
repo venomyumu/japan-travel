@@ -416,4 +416,113 @@
     }
   }
 }
+/* =========================================
+    户外探险专属：山系野奢 (.trekking-guide)
+   ========================================= */
 
+.trekking-guide {
+  --trek-green: #2d5a27;   /* 深林绿：代表森林与生命力 */
+  --trek-accent: #15803d;  /* 亮绿：用于高亮 */
+  --trek-bg: #f7f9f7;      /* 极淡绿背景 */
+  --rock-slate: #334155;   /* 岩石灰 */
+  
+  /* 1. 顶部数据概览：延续你的 Grid 布局 */
+  blockquote:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    background: var(--trek-bg);
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid var(--trek-green); /* 顶部色条 */
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    font-style: normal;
+
+    p { margin: 0; font-size: 0.95rem; color: var(--rock-slate); }
+    strong { color: var(--trek-green); font-weight: 700; }
+  }
+
+  /* 2. 行程标题：延续你 Day 标题的硬朗风格 */
+  h3 {
+    background: var(--trek-green);
+    color: #ffffff !important;
+    padding: 6px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    margin: 3rem 0 1.2rem 0;
+    box-shadow: 4px 4px 0px rgba(45, 90, 39, 0.2);
+    
+    &::before {
+      margin-right: 8px;
+      font-size: 1.1rem;
+    }
+  }
+
+  /* 3. 徒步时间轴列表 */
+  ul {
+    border-left: 2px dashed #cbd5e1;
+    margin-left: 0.8rem;
+    padding-left: 1.5rem;
+    list-style: none;
+
+    li {
+      position: relative;
+      margin-bottom: 1.2rem;
+      line-height: 1.8;
+
+      /* 自定义时间轴锚点 */
+      &::before {
+        content: "";
+        position: absolute;
+        left: calc(-1.5rem - 6px);
+        top: 0.6rem;
+        width: 10px;
+        height: 10px;
+        background: white;
+        border: 2px solid var(--trek-green);
+        border-radius: 50%;
+        z-index: 1;
+      }
+    }
+  }
+
+  /* 4. 链接样式：延续你冰川蓝的呼吸感，但改为森林绿 */
+  .internal {
+    text-decoration: none !important;
+    background: rgba(45, 90, 39, 0.05) !important;
+    color: var(--trek-green) !important;
+    border: 1px solid rgba(45, 90, 39, 0.1) !important;
+    padding: 1px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+
+    &:hover {
+      background: var(--trek-green) !important;
+      color: white !important;
+      box-shadow: 0 4px 12px rgba(45, 90, 39, 0.15);
+    }
+  }
+
+  /* 5. 针对 Quartz 表格的特别美化 */
+  table {
+    border: none;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    
+    th {
+      background-color: var(--trek-green);
+      color: white;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+    }
+
+    td {
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 0.95rem;
+    }
+  }
+}

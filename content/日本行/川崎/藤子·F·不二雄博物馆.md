@@ -2,6 +2,7 @@
 title: 🐱 藤子·F·不二雄博物馆 (哆啦A梦)
 cssclasses:
   - spot-card-modern
+location: "[35.6101, 139.5724]"
 ---
 
 ### 📍 基本信息
